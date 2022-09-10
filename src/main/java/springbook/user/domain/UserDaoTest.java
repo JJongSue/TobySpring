@@ -2,9 +2,10 @@ package springbook.user.domain;
 
 import java.sql.SQLException;
 
-public class UserMain {
+public class UserDaoTest {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        UserDao dao = new UserDao();
+        ConnectionMaker connectionMaker = new SimpleConnectionMaker();
+        UserDao dao = new UserDao(connectionMaker);
 
         User user = new User();
         user.setId("json.p");
