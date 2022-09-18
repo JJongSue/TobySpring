@@ -9,7 +9,7 @@ public class SimpleConnectionMaker implements ConnectionMaker{
     public Connection makeConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection c = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/toby_spring?serverTimezone=Asia/Seoul&useSSL=false",
+                "jdbc:mysql://localhost:3306/toby_spring?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true&useSSL=false",
                 "spring",
                 "book"
         );
